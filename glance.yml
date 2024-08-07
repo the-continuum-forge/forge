@@ -1,0 +1,224 @@
+theme:
+  background-color: 50 1 6
+  contrast-multiplier: 1.0
+  primary-color: 220 91 54
+  positive-color: 109 58 40
+  negative-color: 347 87 44
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 12h
+            timezones:
+              - timezone: Asia/Kolkata
+                label: India
+          - type: calendar
+          - type: bookmarks
+            groups:
+              - title: Free / Open Source
+                color: 10 70 50
+              - links:
+                  - title: Unminus
+                    url: https://www.unminus.com/
+                  - title: Awesome Blender add-ons
+                    url: https://awesome-blender.netlify.app/
+                  - title: UPBGE
+                    url: https://upbge.org/
+              - title: Resources / Tutorials
+                color: 10 70 50
+                links:
+                  - title: CGWiki
+                    url: https://tokeru.com/cgwiki/
+                  - title: Python 3 for Maya
+                    url: https://zurbrigg.teachable.com/p/python-3-for-maya-vol-1
+                  - title: YouTube
+                    url: https://www.youtube.com/
+              - title: Random
+                color: 10 70 50
+                links:
+                  - title: The Continuum Forge
+                    url: https://discord.gg/gfe98XydC3
+                  - title: Artstation
+                    url: https://www.artstation.com/
+                  - title: Sketchfab
+                    url: https://sketchfab.com/
+      - size: full
+        widgets:
+          - type: rss
+            title: Artstation Artworks
+            style: detailed-list
+            limit: 20
+            collapse-after: 4
+            cache: 2h
+            feeds:
+              - url: https://www.artstation.com/artwork.rss
+      - size: small
+        widgets:
+          - type: twitch-channels
+            channels:
+              - vfxcentral
+              - denrubi
+              - firstcrimson
+              - elochai
+              - calverschool
+
+          - type: twitch-top-games
+            exclude:
+              - just-chatting
+              - pools-hot-tubs-and-beaches
+              - music
+              - art
+              - asmr
+  - name: Discord
+    columns:
+      - size: full
+        widgets:
+          - type: html
+            source: |
+              <iframe src="https://e.widgetbot.io/channels/1253045091547877419/1269003221138145374" allow="clipboard-write; fullscreen" height="700" width="100%"></iframe>
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 12h
+            timezones:
+              - timezone: Asia/Kolkata
+                label: India
+          - type: iframe
+            title: The Continuum Forge
+            source: https://discord.com/widget?id=1253045091547877419&theme=dark
+            height: 500
+
+  - name: News
+    columns:
+      - size: small
+        widgets:
+          - type: rss
+            title: CG Channel
+            style: vertical-list
+            limit: 10
+            collapse-after: 4
+            cache: 2h
+            feeds:
+              - url: https://feeds2.feedburner.com/cgchannel/nHpU
+          - type: rss
+            title: OD FORCE
+            style: vertical-list
+            limit: 10
+            collapse-after: 4
+            cache: 2h
+            feeds:
+              - url: https://forums.odforce.net/rss/1-odforce.xml/
+      - size: full
+        widgets:
+          - type: rss
+            title: 80 level
+            style: detailed-list
+            limit: 15
+            collapse-after: 3
+            cache: 2h
+            feeds:
+              - url: https://80.lv/feed/
+          - type: rss
+            title: Artstation Artworks
+            style: detailed-list
+            limit: 20
+            collapse-after: 4
+            cache: 2h
+            feeds:
+              - url: https://www.artstation.com/artwork.rss
+          - type: rss
+            title: VFXWorld Magazine
+            style: horizontal-cards
+            limit: 20
+            collapse-after: 4
+            cache: 2h
+            feeds:
+              - url: https://www.awn.com/vfxworld/rss.xml
+          - type: rss
+            title: Steam store collection news
+            style: detailed-list
+            limit: 10
+            collapse-after: 3
+            cache: 2h
+            feeds:
+              - url: https://store.steampowered.com/feeds/news/collection/steam
+      - size: small
+        widgets:
+          - type: rss
+            title: We Work Remotely - Design
+            style: vertical-list
+            limit: 10
+            collapse-after: 7
+            cache: 2h
+            feeds:
+              - url: https://weworkremotely.com/categories/remote-design-jobs.rss
+          - type: rss
+            title: Remotive Design Jobs
+            style: vertical-list
+            limit: 10
+            collapse-after: 4
+            cache: 2h
+            feeds:
+              - url: https://remotive.com/remote-jobs/feed/design
+  - name: Tutorials
+    columns:
+      - size: full
+        widgets:
+          - type: videos
+            title: Beginner
+            style: grid-cards
+            channels:
+              - UCue7TFlrt9FxXarpsl872Dg # Unreal Sensei
+      - size: small
+        widgets:
+          - type: videos
+            title: Advanced
+            style: grid-cards
+            channels:
+              - UCBobmJyzsJ6Ll7UbfhI4iwQ # Jeff Geerling
+              - UCegWLyW4CYzph4dYW-gYy0g # ServeTheHome
+
+  - name: ShowCase
+    columns:
+      - size: full
+        widgets:
+          - type: videos
+            title: Projects
+            style: grid-cards
+            # limit: 50
+            channels:
+              - UCc_aQr37tivlqfwTZrfKwdA # Vishal Kadam
+              - UCT_QdgX-P1H_LYWrSAWeCwg # Abhijeet Dalli
+              - UCOlLMK9itmvWp0N3hT_DrEA # SNEHADEEP PAL
+              - UCptOGwJ9fO8zjAugnc-_H2g # Raj kamble
+
+  - name: Tools
+    columns:
+      - size: full
+        widgets:
+          - type: iframe
+            title: Excalidraw
+            source: https://excalidraw.com
+            height: 700
+          - type: iframe
+            title: Nomad Sculpt
+            source: https://nomadsculpt.com/demo/
+            height: 700
+          - type: iframe
+            title: SculptGL
+            source: https://stephaneginier.com/sculptgl/
+            height: 700
+          - type: iframe
+            title: Sculptfab
+            source: https://labs.sketchfab.com/sculptfab/
+            height: 700
+          - type: iframe
+            title: Photopea
+            source: https://www.photopea.com/
+            height: 700
+          - type: iframe
+            title: Miro Lite
+            source: https://miro.com/online-whiteboard/
+            height: 700
