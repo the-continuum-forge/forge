@@ -1,26 +1,14 @@
-# Use the official Golang image with a compatible version  
 FROM golang:1.22-alpine AS builder  
-
-# Set the working directory  
 WORKDIR /app  
-
-# Copy go.mod and go.sum files  
-COPY go.mod go.sum ./  
-
-# Download the dependencies  
+COPY go.mod go.sum ./
 RUN go mod download  
-
-# Copy the source code  
 COPY . .  
-
-# Build the Go application  
 RUN go build -o myapp .  
-
-# Final image stage  
-FROM alpine:latest  
-
-# Copy the compiled binary from the builder stage  
+FROM alpine:latest
+# Install curl to download glance.yml from repository
+RUN apk add --no-cache curl  
+WORKDIR /app  
+# update the username and repository names to yours please
+RUN curl -o glance.yml https://raw.githubusercontent.com/the-continuum-forge/forge/dev/glance.yml
 COPY --from=builder /app/myapp /myapp  
-
-# Command to run the binary  
 ENTRYPOINT ["/myapp"]
