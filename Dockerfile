@@ -9,6 +9,6 @@ FROM alpine:latest
 RUN apk add --no-cache curl  
 WORKDIR /app  
 # update the username and repository names to yours please
-RUN curl -o glance.yml https://gist.githubusercontent.com/vishalkadam47/c37f3841ef38e0f54d38ff8594de4b1d/raw/8215253e1664af488b3b78a4adc458e844eaf0d6/glance.yml
+RUN curl -o glance.yml https://gist.githubusercontent.com/vishalkadam47/c37f3841ef38e0f54d38ff8594de4b1d/raw/glance.yml
 COPY --from=builder /app/myapp /myapp  
 ENTRYPOINT ["/myapp"]
