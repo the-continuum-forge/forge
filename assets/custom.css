@@ -1,0 +1,138 @@
+body {
+margin: 0;
+padding: 0;
+font-family: "Open Sans", sans-serif;
+}
+/* Title styles */
+::selection {
+background-color: #f7ca18;
+}
+
+section {
+height: 50vh;
+display: flex;
+justify-content: center;
+}
+
+section .title {
+max-width: 70%;
+width: 100%;
+align-self: center;
+text-align: center;
+margin: 0 auto;
+overflow: hidden;
+padding-bottom: 10px;
+}
+
+section .title span {
+display: inline-block;
+font-size: 5vw;
+color: #efefef;
+width: 100%;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 0.25vw;
+}
+
+section .title span:nth-child(2) {
+font-size: 1vw;
+}
+
+section .title span:nth-child(3) {
+font-size: 1rem;
+}
+
+section .title span a {
+position: relative;
+display: inline-block;
+margin-left: 0.5rem;
+text-decoration: none;
+color: #f7ca18;
+}
+
+section .title span a::after {
+    content: "";
+    height: 2px;
+    background-color: #f7ca18;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+@keyframes linkAfter {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+/* From Uiverse.io by reshades */
+.button {
+background-color: #ffffff00;
+color: #fff;
+width: 8.5em;
+height: 2.9em;
+border: #3654ff 0.2em solid;
+border-radius: 11px;
+}
+
+.button:hover {
+background-color: #3654ff;
+cursor: pointer;
+}
+
+.button svg {
+width: 1.6em;
+margin: -0.2em 0.8em 1em;
+position: absolute;
+display: flex;
+}
+
+.text {
+margin: 0 1.5em;
+}
+.title .spacer {
+height: 20px;
+}
+
+@media (max-width: 768px) {
+section .title span {
+    font-size: 8vw;
+}
+
+section .title span:nth-child(2) {
+    font-size: 3vw;
+}
+
+section .title span:nth-child(3) {
+    font-size: 0.8rem;
+}
+
+.button {
+    width: 7em;
+    height: 2.5em;
+}
+
+.button .text {
+    margin: 0 1em;
+    font-size: 0.9em;
+}
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased gap between buttons */
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Vertical gap for mobile view */
+    }
+}
